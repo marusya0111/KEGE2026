@@ -1,5 +1,3 @@
-Задание с косяком 6205
-
 # системы счисления
 
 N = 25
@@ -40,7 +38,7 @@ def convert2(num, sys):
     while num:
         res += alph[num % sys]
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 
 # перевод в десятичную систему
