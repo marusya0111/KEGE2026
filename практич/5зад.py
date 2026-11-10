@@ -9,7 +9,7 @@
 #     if R >600:
 #         a.append(R)
 # print(min(a))
-# a = []
+a = []
 # from string import printable as alph
 # def conv(num,sys):
 #     res = ""
@@ -17,22 +17,21 @@
 #         res = res + alph[num%sys]
 #         num = num//sys
 #     return res[::-1] if res else"0"
-#
-# for N in range(1,1000):
-#     R = conv(N,4)
-#     if N % 4 == 0:
-#         R = "2" + R + "03"
-#     else:
-#         ost = (N % 4)*5
-#         ost_4 = conv(ost,4)
-#         R = R + ost_4
-#     R = int(R,4)
-#     if R < 567:
-#         a.append(N)
-# print(max(a))
+
+for N in range(1,1000):
+    R = bin(N)[2:]
+    if N % 8 == 0:
+        R = R + R[-2:]
+    else:
+       osti = (N % 8)*2
+       osti_2 = bin(osti)[2:]
+    R = int(R,3)
+    if R > 3000:
+        a.append(N)
+print(min(a))
 
 
 
 #
 # r = "123456"
-# print(r[:3])
+# print(r[-3:])
