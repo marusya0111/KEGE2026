@@ -18,4 +18,3 @@ for x in alph[:22]:
 
 
 
-
